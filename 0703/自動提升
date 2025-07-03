@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int integerInput = scanner.nextInt();
+        
+        
+        double floatInput = scanner.nextDouble();
+
+        
+        double result = integerInput + floatInput;
+
+        
+        System.out.printf("%.2f\n", result);
+
+        
+        scanner.close();
+    }
+}

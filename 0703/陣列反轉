@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        
+        int n = scanner.nextInt();
+        
+       
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+      
+        int left = 0;
+        int right = n - 1;
+        while (left < right) {
+            // 交換 arr[left] 和 arr[right]
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+          
+            left++;
+            right--;
+        }
+
+       
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i]);
+            if (i != n - 1) {
+                System.out.print(" "); 
+            }
+        }
+
+        
+        scanner.close();
+    }
+}
